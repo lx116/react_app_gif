@@ -1,0 +1,80 @@
+.Gif{
+    margin: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    position: relative;
+    float: left;
+}
+.Gif h4{
+    margin: 10px auto;
+    font-size: 20px;
+
+}
+.Gif img{
+    border-radius: 20px;
+    margin: 10px auto;
+    object-fit: contain;
+    width: auto;
+}
+
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid #fff;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fff transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+:root{
+    --result-columns: 1;
+}
+
+.ListOfGifs{
+    column-count: var(--result-columns);
+    column-gap: 80px;
+
+
+}
+
+@media (min-width: 800px) {
+    :root{
+        --result-columns: 2;
+    }
+}
+
+@media (min-width: 1000px) {
+    :root{
+        --result-columns: 4;
+    }
+}
